@@ -4,9 +4,11 @@
 Transmitter to Receiver messages:-
 
 
--1	0	-1	0	1	1	1	1
-1	1	1	1	1	1	1       1
-1	1	1	1	1	-1	0	-1
+0 0 0 0	0	0 0 0 
+0	0	1	1	1	1 1	1
+1	1 1	1	1 1 1	1
+1	1 1	0 0 0 0	0
+0 0 0 0
 
 1	1	0	0	0	0	0	1
 1	1	1	1	1	1	1	1
@@ -17,10 +19,10 @@ Transmitter to Receiver messages:-
 
 The message turns out to be :
 
--1 0 -1 	--> Preamble/Initial bits
-0 1     	--> Acknowledgement
-Next 16bits 1's	--> Message
--1  		--> End of message
-0 -1    	--> Random bits
-1 1 0 0 0 0 0 1 --> Req_RN
-all the remaining-> Message
+0 0 0 0 0 0 0 0 0 	--> Preamble/Initial bits
+0 1     	          --> Acknowledgement
+Next 16bits 1's	    --> Message
+0 0 0 0 		        --> End of message
+0 0 0 0 0           --> Random bits
+1 1 0 0 0 0 0 1     --> Req_RN
+all the remaining   --> Message
